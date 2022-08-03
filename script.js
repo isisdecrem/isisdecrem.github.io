@@ -49,6 +49,7 @@ signUpButton.addEventListener("click", function(){
       createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
       .then((userCredential) => {
         const user = userCredential.user;
+        window.alert("Account created!"); 
       })
       .catch((error)=>{
         const errorCode = error.code;
