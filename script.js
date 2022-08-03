@@ -86,7 +86,7 @@ logInButton.addEventListener("click", function(){
     const errorCode = error.code;
     const errorMessage = error.message; 
     console.log("Error");
-    window.alert("Error")
+    window.alert("Error");
   });
 });
 
