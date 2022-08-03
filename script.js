@@ -16,10 +16,10 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
  
 //login button = submitButton
-const signin = document.getElementById("signin");
-const signInButton= document.getElementById("signin-btn");
-const emailSignInInput= document.getElementById("email");
-const pwSignInInput= document.getElementById("password");
+const login = document.getElementById("signin");
+const logInButton= document.getElementById("signin-btn");
+const emailLogInInput= document.getElementById("email");
+const pwLogInInput= document.getElementById("password");
 
 const createaccount = document.getElementById("createaccount")
 const signUpButton = document.getElementById("create-acc-btn");
@@ -29,9 +29,10 @@ const pwSignUpConfirmInput= document.getElementById("password-confirm");
 
 var email, password, emailSignUp, pwSignUp, pwSignUpConfirm;
 
+//Sign Up
 signUpButton.addEventListener("click", function(){
     var valid = true; 
-    emailSignUp = emailSignInInput.value; 
+    emailSignUp = emailSignUpInput.value; 
     pwSignUp = pwSignUpInput.value; 
     pwSignUpConfirm = pwSignUpConfirmInput.value;
 
@@ -58,3 +59,19 @@ signUpButton.addEventListener("click", function(){
     }
 });
 
+
+//Sign In
+logInButton.addEventListener("click", function(){
+  email = emailLogInInput.value; 
+  password = pwLogInInput.value; 
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) =>{
+    const user = userCredential.user;
+    window.alert("Signed in")
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message; 
+  });
+
+});
