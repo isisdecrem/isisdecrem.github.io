@@ -1,2 +1,2 @@
 import { currentUser } from "./script";
-const name = currentUser
+const user = currentUser; 
