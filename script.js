@@ -26,8 +26,11 @@ const signUpButton = document.getElementById("create-acc-btn");
 const emailSignUpInput= document.getElementById("email-signup");
 const pwSignUpInput= document.getElementById("password-signup");
 const pwSignUpConfirmInput= document.getElementById("password-confirm");
+const fNameInput = document.getElementById("fName");
+const lNameInput = document.getElementById("lName");
+const schoolInput = document.getElementById("school");
 
-var email, password, emailSignUp, pwSignUp, pwSignUpConfirm;
+var email, password, emailSignUp, pwSignUp, pwSignUpConfirm, fName, lName, school;
 
 //Sign Up
 signUpButton.addEventListener("click", function(){
@@ -35,6 +38,9 @@ signUpButton.addEventListener("click", function(){
     emailSignUp = emailSignUpInput.value; 
     pwSignUp = pwSignUpInput.value; 
     pwSignUpConfirm = pwSignUpConfirmInput.value;
+    fName = fNameInput.value;
+    lName = lNameInput.value;
+    school = schoolInput.value;
 
     //make sure they put in the info
     if(pwSignUp == null || pwSignUpConfirm == null || emailSignUp == null){
@@ -51,6 +57,7 @@ signUpButton.addEventListener("click", function(){
       .then((userCredential) => {
         const user = userCredential.user;
         window.alert("Account created!"); 
+        window.location="home.html"; 
       })
       .catch((error)=>{
         const errorCode = error.code;
