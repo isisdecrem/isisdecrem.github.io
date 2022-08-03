@@ -3,8 +3,6 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 import "User.js"; 
 
-export const currentUser = new User("", "", "", "", "");
-
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
     authDomain: "brainpower-dd828.firebaseapp.com",
@@ -62,7 +60,7 @@ signUpButton.addEventListener("click", function(){
         const user = userCredential.user;
         window.alert("Account created!"); 
         const userID = user.uid; 
-        currentUser = new User(emailSignUp, fName, lName, school, userID); 
+        const currentUser = new User(emailSignUp, fName, lName, school, userID); 
         window.location="home.html"; 
       })
       .catch((error)=>{
