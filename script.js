@@ -1,6 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import "User.js"; 
+
+export const currentUser = new User();
+
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
     authDomain: "brainpower-dd828.firebaseapp.com",
@@ -43,7 +47,7 @@ signUpButton.addEventListener("click", function(){
     school = schoolInput.value;
 
     //make sure they put in the info
-    if(pwSignUp == null || pwSignUpConfirm == null || emailSignUp == null){
+    if(pwSignUp == null || pwSignUpConfirm == null || emailSignUp == null || fName == null || lName == null || school == null){
         window.alert("Please fill in the required fields.")
         valid=false; 
     }
@@ -57,6 +61,9 @@ signUpButton.addEventListener("click", function(){
       .then((userCredential) => {
         const user = userCredential.user;
         window.alert("Account created!"); 
+        
+        const userID = user.uid; 
+        currentUser = new User(emailSignUp, fName, lName, school, userID); 
         window.location="home.html"; 
       })
       .catch((error)=>{
