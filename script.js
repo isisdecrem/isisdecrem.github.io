@@ -60,6 +60,10 @@ signUpButton.addEventListener("click", function(){
         const user = userCredential.user;
         window.alert("Account created!"); 
         window.location="home.html"; 
+        var favoritemovie = "Shrek";
+        sessionStorage.setItem("favoriteMovie", favoritemovie);
+
+
       })
       .catch((error)=>{
         const errorCode = error.code;

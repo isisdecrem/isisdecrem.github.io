@@ -11,3 +11,6 @@ class User{
         return `Hello ${this.fName} ${this.lName}`; 
     }
 }
+
+var favoritemovie = sessionStorage.getItem("favoriteMovie");
+console.log(favoritemovie);
