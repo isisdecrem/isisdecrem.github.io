@@ -14,3 +14,4 @@ class User{
 
 var favoritemovie = sessionStorage.getItem("favoriteMovie");
 console.log(favoritemovie);
+document.write(favoritemovie);
