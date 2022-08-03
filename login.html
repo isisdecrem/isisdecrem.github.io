@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+    </head>
+
     <body>
-        <form>
-            <p>login</p>
-        </form>
+    
+
+       
+        <h1>Login or Sign Up</h1>
+        <div class="login container">
+            <div id="signin"> 
+                <h2>Sign in</h2>
+                <input id="email" type="text" placeholder="Email address">
+                <input id="password" type="text" placeholder="Password">
+                <button id="s">Submit</button>
+            </div>
+
+            <div id="createaccount">
+                <input id="email-signup" type="text" placeholder="Email address">
+                <input id="password-signup" type="text" placeholder="Password">
+                <input id="password-confirm" type="text" placeholder="Password confirm">
+                <button id="create-acc-btn">Create account</button>
+            </div>
+
+        </div>
+
+       <script type="module" src="script.js"></script>
     </body>
 </html>
