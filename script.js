@@ -51,6 +51,7 @@ signUpButton.addEventListener("click", function(){
       .then((userCredential) => {
         const user = userCredential.user;
         window.alert("Account created!"); 
+        window.location = "home.html";
       })
       .catch((error)=>{
         const errorCode = error.code;
@@ -71,6 +72,7 @@ logInButton.addEventListener("click", function(){
     const user = userCredential.user;
     console.log("Signed in");
     window.alert("Signed in");
+    window.location = "home.html";
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -80,8 +82,3 @@ logInButton.addEventListener("click", function(){
   });
 });
 
-firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location = 'home.html'; //After successful login, user will be redirected to home.html
-  }
-});
