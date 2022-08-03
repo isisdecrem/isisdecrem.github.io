@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import "User.js"; 
 
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
@@ -46,12 +45,13 @@ signUpButton.addEventListener("click", function(){
 
     //make sure they put in the info
     if(pwSignUp == null || pwSignUpConfirm == null || emailSignUp == null || fName == null || lName == null || school == null){
-        window.alert("Please fill in the required fields.")
+        window.alert("Please fill in the required fields.");
         valid=false; 
     }
     //check pw matches
     if(pwSignUp != pwSignUpConfirm){
         valid=false;
+        window.alert("Passwords do not match.");
     }
 
     if(valid){
@@ -60,8 +60,6 @@ signUpButton.addEventListener("click", function(){
         const user = userCredential.user;
         window.alert("Account created!"); 
         window.location="home.html"; 
-        
-         
       })
       .catch((error)=>{
         const errorCode = error.code;
