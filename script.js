@@ -21,7 +21,7 @@ const logInButton= document.getElementById("signin-btn");
 const emailLogInInput= document.getElementById("email");
 const pwLogInInput= document.getElementById("password");
 
-const createaccount = document.getElementById("createaccount")
+const createaccount = document.getElementById("createaccount");
 const signUpButton = document.getElementById("create-acc-btn");
 const emailSignUpInput= document.getElementById("email-signup");
 const pwSignUpInput= document.getElementById("password-signup");
@@ -43,7 +43,7 @@ signUpButton.addEventListener("click", function(){
     }
     //check pw matches
     if(pwSignUp != pwSignUpConfirm){
-        valid=false
+        valid=false;
     }
 
     if(valid){
@@ -63,15 +63,19 @@ signUpButton.addEventListener("click", function(){
 //Sign In
 logInButton.addEventListener("click", function(){
   email = emailLogInInput.value; 
+  console.log(email);
   password = pwLogInInput.value; 
+  console.log(password);
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) =>{
     const user = userCredential.user;
-    window.alert("Signed in")
+    console.log("Signed in");
+    window.alert("Signed in");
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message; 
+    console.log("Error");
+    window.alert("Error")
   });
-
 });
