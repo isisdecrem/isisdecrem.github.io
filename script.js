@@ -60,8 +60,7 @@ signUpButton.addEventListener("click", function(){
         const user = userCredential.user;
         window.alert("Account created!"); 
         window.location="home.html"; 
-        const userID = user.uid; 
-        const currentUser = new User(emailSignUp, fName, lName, school, userID); 
+        
          
       })
       .catch((error)=>{
