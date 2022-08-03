@@ -51,7 +51,6 @@ signUpButton.addEventListener("click", function(){
       .then((userCredential) => {
         const user = userCredential.user;
         window.alert("Account created!"); 
-        window.location = "home.html";
       })
       .catch((error)=>{
         const errorCode = error.code;
@@ -72,7 +71,7 @@ logInButton.addEventListener("click", function(){
     const user = userCredential.user;
     console.log("Signed in");
     window.alert("Signed in");
-    window.location = "home.html";
+    window.location="home.html"; 
   })
   .catch((error) => {
     const errorCode = error.code;
