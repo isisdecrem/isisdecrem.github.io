@@ -6,6 +6,7 @@
     <h1>Welcome home </h1>
     <body>
         <h2>Hello</h2>
+        <h3></h3>
 
         
         
@@ -38,6 +39,7 @@
                  // User is signed in, see docs for a list of available properties
                  // https://firebase.google.com/docs/reference/js/firebase.User
                  const uid = user.uid;
+                 document.write(`${uid}`)
                  // ...
                  } else {
                     window.location="index.html";
@@ -45,13 +47,6 @@
             });
           </script>
             
-        <h3>userID</h3>
-        <script>
-            var me = "hello"
-        </script>
-        <h4>${me}</h4>
-
-          <h4>${uid}</h4>
     </body>
     
 </html>
