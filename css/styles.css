@@ -1,11 +1,10 @@
-:root{
-    --light:#FAF8F9; 
-    --lightaccent:#91B68A;
-    --main: #B3E1DF;
-    --darkaccent: #996392; 
-    --dark: #5D8DB1; 
 
-}
+:root {
+    --pink: hsl(343, 84%, 58%);
+    --neon: hsl(76, 58%, 53%);
+    --bluedark: hsl(249, 49%, 15%);
+    --blue: hsl(175, 22%, 66%);
+};
 
 .container{
     padding-top: 1rem;
@@ -15,16 +14,17 @@
 .jumbotron-fluid {
     padding-top: 10rem;
     padding-bottom: 10rem;
-    background-color: var(--main); 
+    background-color: hsl(249, 49%,15%);
     border: 5px; 
     height: 30rem;
     text-align: center;
     border-radius: 0.2rem;
+    margin: 40px;
+    color:var(--pink);
   }
 
   .overlay {
-    background-color: var(--light);
-    opacity: 0.5;
+    background-color: var(--bluedark);
     position: absolute;
     top: 0;
     left: 0;
@@ -32,6 +32,16 @@
     right: 0;
     z-index: -1;
   }
+
+  input::placeholder {
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-weight: 100;
+    opacity: .9;
+    color: black;
+}
+
+
 
 
 

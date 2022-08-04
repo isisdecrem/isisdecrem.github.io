@@ -4,28 +4,31 @@
         <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:bold,light,extralight,italic,uppercase-text">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:bold,light,extralight,italic,uppercase-text">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
-    <body>
+    <body style="background-color:hsl(343, 84%, 58%);">
 
-        <h1 style="text-align: center; padding: 40px;">Login or Sign Up</h1>
+        <h1 style="text-align: center; padding: 40px; color:#f491b6 ; font-family:'Oswald'; font-weight:300;">YOUR <span style="font-family:'Oswald'; font-weight:600;">BRAINPOWER</span></h1>
         <div class="row justify-content-center" style="text-align: center; height:30rem;" name="login container">
-            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(145, 182, 138, 0.5)">
-                <div  id="signin" > 
-                    <h3 style="font-weight:300; margin:15px;">Sign in</h3>
-                    <div style="margin:18px;">
+            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(255,255,255, 0.9);">
+                <div  id="signin" style="font-family:'Oswald'; color:#f11262;"> 
+                    <h3 style="font-weight:500; margin-top:120px; margin-bottom: 16px;">SIGN IN</h3>
+                    <div style="margin:16px;">
                         <input class="form-control" id="email" type="text" placeholder="Email address">
                     </div>
-                    <div style="margin:18px;">
+                    <div style="margin:16px;">
                         <input class="form-control" id="password" type="text" placeholder="Password">
                     </div>
                    
-                    <button id="signin-btn" class="btn btn-outline-primary" style="color:#5D8DB1; margin: 25px;">Sign In</button>
+                    <button id="signin-btn" class="btn btn-outline-primary" style="color:#f11262; margin: 25px; border-color: #f11262;">ENTER</button>
                 </div>
             </div>
-            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(179, 225, 223, 0.5)">
-                <div id="createaccount">
-                    <h3 style="font-weight:300; margin:15px;">Create a new account</h3>
+            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(255,255,255, 0.9)">
+                <div id="createaccount" style="font-family:'Oswald'; color:#f11262;">
+                    <h3 style="font-weight:500; margin:30px;">CREATE AN ACCOUNT</h3>
                     <div style="margin:8px;">
                         <input class="form-control" id="email-signup" type="text" placeholder="Email address">
                     </div>
@@ -45,7 +48,7 @@
                         <input class="form-control" id="school" type="text" placeholder="School">
                     </div>
                     
-                    <button id="create-acc-btn" class="btn btn-info" style="background-color:#5D8DB1; border-color:  #5D8DB1;">Create account</button>
+                    <button id="create-acc-btn" class="btn btn-outline-primary"  style="color:#f11262; margin: 25px; border-color: #f11262;">CREATE</button>
                 </div>
             </div>    
         </div>
