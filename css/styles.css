@@ -1,4 +1,37 @@
-h1{
-    font-family:Arial, Helvetica, sans-serif;
-    text-align:center; 
+:root{
+    --light:#FAF8F9; 
+    --lightaccent:#91B68A;
+    --main: #B3E1DF;
+    --darkaccent: #996392; 
+    --dark: #5D8DB1; 
+
 }
+
+.container{
+    padding-top: 1rem;
+}
+
+
+.jumbotron-fluid {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: var(--main); 
+    border: 5px; 
+    height: 30rem;
+    text-align: center;
+    border-radius: 0.2rem;
+  }
+
+  .overlay {
+    background-color: var(--light);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+
+
