@@ -61,7 +61,6 @@ signUpButton.addEventListener("click", function(){
         window.alert("Account created!"); 
         window.location="home.html"; 
 
-
       })
       .catch((error)=>{
         const errorCode = error.code;
