@@ -3,31 +3,53 @@
     <head>
         <script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 
     <body>
-       
-        <h1>Login or Sign Up</h1>
-        <div class="login container">
-            <div id="signin"> 
-                <h2>Sign in</h2>
-                <input id="email" type="text" placeholder="Email address">
-                <input id="password" type="text" placeholder="Password">
-                <button id="signin-btn">Submit</button>
+
+        <h1 style="text-align: center; padding: 40px;">Login or Sign Up</h1>
+        <div class="row justify-content-center" style="text-align: center; height:30rem;" name="login container">
+            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(145, 182, 138, 0.5)">
+                <div  id="signin" > 
+                    <h3 style="font-weight:300; margin:15px;">Sign in</h3>
+                    <div style="margin:18px;">
+                        <input class="form-control" id="email" type="text" placeholder="Email address">
+                    </div>
+                    <div style="margin:18px;">
+                        <input class="form-control" id="password" type="text" placeholder="Password">
+                    </div>
+                   
+                    <button id="signin-btn" class="btn btn-outline-primary" style="color:#5D8DB1; margin: 25px;">Sign In</button>
+                </div>
             </div>
-
-
-            <div id="createaccount">
-                <input id="email-signup" type="text" placeholder="Email address">
-                <input id="password-signup" type="text" placeholder="Password">
-                <input id="password-confirm" type="text" placeholder="Password confirm">
-                <input id="fName" type="text" placeholder="First Name">
-                <input id="lName" type="text" placeholder="Last Name">
-                <input id="school" type="text" placeholder="School">
-                <button id="create-acc-btn">Create account</button>
-            </div>
-
+            <div class="col-5 mx-3 form-group" style="border-radius: 0.5rem; background-color: rgba(179, 225, 223, 0.5)">
+                <div id="createaccount">
+                    <h3 style="font-weight:300; margin:15px;">Create a new account</h3>
+                    <div style="margin:8px;">
+                        <input class="form-control" id="email-signup" type="text" placeholder="Email address">
+                    </div>
+                   <div style="margin:8px;">
+                        <input class="form-control" id="password-signup" type="text" placeholder="Password">
+                   </div>
+                   <div style="margin:8px;">
+                        <input class="form-control" id="password-confirm" type="text" placeholder="Password confirm">
+                   </div>
+                    <div style="margin:8px;">
+                        <input class="form-control" id="fName" type="text" placeholder="First Name">
+                    </div>
+                    <div style="margin:8px;">
+                        <input class="form-control" id="lName" type="text" placeholder="Last Name">
+                    </div>
+                    <div style="margin:8px;">
+                        <input class="form-control" id="school" type="text" placeholder="School">
+                    </div>
+                    
+                    <button id="create-acc-btn" class="btn btn-info" style="background-color:#5D8DB1; border-color:  #5D8DB1;">Create account</button>
+                </div>
+            </div>    
         </div>
+        
 
        <script type="module" src="script.js"></script>
     </body>
