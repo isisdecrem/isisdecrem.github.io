@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import {getDatabase, ref, get, set, child} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+import {getDatabase, ref, get, set, child} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 
 const firebaseConfig = {
