@@ -14,7 +14,7 @@ const firebaseConfig = {
     messagingSenderId: "505064365443",
     appId: "1:505064365443:web:0a2711c3ae7a229c626ab6",
     measurementId: "G-LT9LG0QF5J",
-    databaseURL: "https://brainpower-dd828-default-rtdb.firebaseio.com"
+    
   };
 
 const app = initializeApp(firebaseConfig);
