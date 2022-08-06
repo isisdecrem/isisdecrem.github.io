@@ -18,6 +18,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getDatabase(app);
+const ref = ref(db, 'users/' + 'me'); 
 //testing database ref
  
 
