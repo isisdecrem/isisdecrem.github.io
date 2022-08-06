@@ -19,7 +19,6 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 //testing database ref
-const database = getDatabase(app);
  
 
 //login button = submitButton
