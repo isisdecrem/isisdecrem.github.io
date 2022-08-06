@@ -4,8 +4,6 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import {getDatabase, ref, get, set, child} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
 
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
     authDomain: "brainpower-dd828.firebaseapp.com",
@@ -13,8 +11,7 @@ const firebaseConfig = {
     storageBucket: "brainpower-dd828.appspot.com",
     messagingSenderId: "505064365443",
     appId: "1:505064365443:web:0a2711c3ae7a229c626ab6",
-    measurementId: "G-LT9LG0QF5J",
-    
+    measurementId: "G-LT9LG0QF5J"  
   };
 
 const app = initializeApp(firebaseConfig);
@@ -67,7 +64,6 @@ signUpButton.addEventListener("click", function(){
       createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
       .then((userCredential) => {
         const user = userCredential.user;
-        set(ref(database, 'student'), "hello");
         window.alert("Account created!"); 
         window.location="home.html"; 
 
