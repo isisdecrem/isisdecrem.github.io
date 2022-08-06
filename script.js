@@ -18,16 +18,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 //testing database ref
-
-function writeUserData(userID, name){
-  const db = getDatabase(app);
-  const reference = ref(db, 'users' + userID);
-  set(reference,{
-    username: name,
-    email: "hi"
-  });
-}
- 
+const database = getDatabase(app); 
 
 //login button = submitButton
 const login = document.getElementById("signin");
@@ -71,7 +62,13 @@ signUpButton.addEventListener("click", function(){
       createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
       .then((userCredential) => {
         const user = userCredential.user;
-        writeUserData("me", "yes");
+        var userRef = database.ref("/users");
+        userRef.set({
+          Isis:{
+            name: Isis,
+            age: 18
+          }
+        }); 
         window.alert("Account created!"); 
         window.location="home.html"; 
 
