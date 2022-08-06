@@ -17,9 +17,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
-const db = getDatabase(app);
-const ref = ref(db, 'users/' + 'me'); 
 //testing database ref
+
+function writeUserData(userID, name){
+  const db = getDatabase(app);
+  const reference = ref(db, 'users' + userID);
+  set(reference,{
+    username: name,
+    email: "hi"
+  });
+}
  
 
 //login button = submitButton
