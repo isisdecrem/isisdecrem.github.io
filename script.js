@@ -4,7 +4,7 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import {getDatabase, ref, get, set, child} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
 
-//testing database ref
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
@@ -13,13 +13,15 @@ const firebaseConfig = {
     storageBucket: "brainpower-dd828.appspot.com",
     messagingSenderId: "505064365443",
     appId: "1:505064365443:web:0a2711c3ae7a229c626ab6",
-    measurementId: "G-LT9LG0QF5J"
+    measurementId: "G-LT9LG0QF5J",
+    databaseURL: "https://brainpower-dd828-default-rtdb.firebaseio.com"
   };
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
-//
+
+//testing database ref
 const database = getDatabase(app);
  
 
@@ -65,9 +67,7 @@ signUpButton.addEventListener("click", function(){
       createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
       .then((userCredential) => {
         const user = userCredential.user;
-        set(ref(database, 'users/'), {
-          username: "hell0"
-        });
+        set(ref(database, 'student'), "hello");
         window.alert("Account created!"); 
         window.location="home.html"; 
 
