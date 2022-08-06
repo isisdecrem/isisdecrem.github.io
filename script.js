@@ -18,8 +18,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 //testing database ref
-const database = getDatabase(app); 
-
 //login button = submitButton
 const login = document.getElementById("signin");
 const logInButton= document.getElementById("signin-btn");
