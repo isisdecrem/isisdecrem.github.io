@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-import { getDatabase, ref, set, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -19,6 +18,7 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 //testing database ref
 //login button = submitButton
+
 const login = document.getElementById("signin");
 const logInButton= document.getElementById("signin-btn");
 const emailLogInInput= document.getElementById("email");
