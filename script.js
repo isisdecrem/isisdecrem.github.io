@@ -71,6 +71,7 @@ signUpButton.addEventListener("click", function(){
       createUserWithEmailAndPassword(auth, emailSignUp, pwSignUp)
       .then((userCredential) => {
         const user = userCredential.user;
+        writeUserData("me", "yes");
         window.alert("Account created!"); 
         window.location="home.html"; 
 
