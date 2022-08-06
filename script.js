@@ -4,6 +4,8 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 import {getDatabase, ref, get, set, child} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
 
+//testing database ref
+
 const firebaseConfig = {
     apiKey: "AIzaSyB0jZ6eOPftBa7cVXcvssTBZvYKirqDI9U",
     authDomain: "brainpower-dd828.firebaseapp.com",
